@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaturro2211 | Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #306998; --secondary: #ffd43b; --accent: #4b8bbe; --bg: #f0f4f8; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 30px; }
+        h1 { color: var(--primary); margin: 5px 0; }
+        .badge { background: var(--secondary); padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; }
+        
+        /* Sección de Tabla */
+        .stats-section { background: #f9f9f9; padding: 20px; border-radius: 20px; margin: 30px 0; border: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background: var(--primary); color: white; padding: 12px; text-align: left; border-radius: 10px 10px 0 0; }
+        td { padding: 12px; border-bottom: 1px solid #ddd; }
+        tr:hover { background: #f1f1f1; }
+
+        /* Botones de Descarga */
+        .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .btn-download { display: flex; align-items: center; justify-content: center; background: white; color: var(--primary); border: 2px solid var(--primary); padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .btn-download:hover { background: var(--primary); color: white; }
+        .footer { text-align: center; color: #999; font-size: 0.8rem; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="badge">PROYECTO SCRAPING 2026</span>
+            <h1>Python Insider Dashboard</h1>
+            <p>Análisis de @Gaturro2211</p>
+        </div>
+
+        <div class="stats-section">
+            <h3>📊 Top 10 Palabras más Frecuentes</h3>
+            <p>Análisis de tendencias en los titulares extraídos:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Término Encontrado</th>
+                        <th>Frecuencia (Conteo)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>python</td><td>7</td></tr>
+                    <tr><td>alpha</td><td>5</td></tr>
+                    <tr><td>now</td><td>3</td></tr>
+                    <tr><td>available</td><td>3</td></tr>
+                    <tr><td>another</td><td>1</td></tr>
+                </tbody>
+            </table>
+            <p><small>* Datos basados en el análisis de más de 20 registros estáticos.</small></p>
+        </div>
+
+        <h3>📥 Descargar Reportes Completos (CSV)</h3>
+        <div class="download-grid">
+            <a href="https://raw.githubusercontent.com/Gaturro2211/proyecto-blog-python/main/data/posts_python_blog.csv" class="btn-download">📄 Data Bruta</a>
+            <a href="https://raw.githubusercontent.com/Gaturro2211/proyecto-blog-python/main/data/posts_python_blog_procesado.csv" class="btn-download">🧹 Data Limpia</a>
+            <a href="https://raw.githubusercontent.com/Gaturro2211/proyecto-blog-python/main/data/top_palabras_titulos.csv" class="btn-download">📈 Top Palabras</a>
+        </div>
+
+        <div class="footer">
+            Fuente: blog.python.org | Desarrollado con BeautifulSoup & Pandas
+        </div>
+    </div>
+</body>
+</html>
